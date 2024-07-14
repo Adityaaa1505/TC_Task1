@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoNNIT+</title>
+    <title>CoNNIT</title>
+    <link rel="icon" type="image/x-icon" href="icons/logo.ico">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -19,6 +21,35 @@
         </div>
         <section class="search-bar">
             <input type="text" id="college-search" placeholder="Search for Events">
+            <div class="image-container">
+                <div class="dropdown">
+                    <button class="dropdown-toggle"><img src="icons/filter-1.png" id="toggleImage" onclick="toggleImage"
+                            alt=""></button>
+                    <div class="dropdown-menu">
+                        <div class="toggle-container">
+                            <label for="freeToggle">Free:</label>
+                            <label class="switch">
+                                <input type="checkbox" id="freeToggle">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="choices">Distance from me:
+                            <button class="choice-btn" data-choice="workshops">
+                                < 1km </button>
+                                    <button class="choice-btn" data-choice="hackathons">
+                                        < 5km </button>
+                                            <button class="choice-btn" data-choice="events">
+                                                < 10km </button>
+                                                    <button class="choice-btn" data-choice="internships"> > 10km
+                                                    </button>
+                        </div>
+                        <div class="date-range">
+                            <label>Begin Date: <input type="date" id="beginDate"></label>
+                            <label>End Date: <input type="date" id="endDate"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <nav>
             <ul>
@@ -149,12 +180,13 @@
             <ul>
                 More
                 <li><a href="#">Blogs</a></li>
-                <li><a href="#">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24"
+                <li><a href="#">GitHub
+                    <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24"
                             class="iconExternalLink_nPIU">
                             <path fill="currentColor"
                                 d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
-                            </path>
-                        </svg></a></li>
+                    </path></svg>
+                </a></li>
             </ul>
         </div>
         Made with ❤️ by Technical Council, NIT Trichy.
