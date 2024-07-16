@@ -1,12 +1,15 @@
 function toggleImage() {
     const image = document.getElementById('toggleImage');
+    image.classList.add('hidden');
     setTimeout(() => {
         if (image.src.includes('filter-1.png')) {
             image.src = 'icons/filter-2.png';
+            image.classList.remove('hidden');
         } else {
             image.src = 'icons/filter-1.png';
+            image.classList.remove('hidden');
         }
-    }, 200);
+    }, 150);
     const box = document.getElementById('toggleBox');
     if (box.classList.contains('hidden')) {
         box.classList.remove('hidden');
